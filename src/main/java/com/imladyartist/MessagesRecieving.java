@@ -36,14 +36,18 @@ public class MessagesRecieving {
         HttpResponse response = client.execute(get);
 
         String result = new BasicResponseHandler().handleResponse(response);
-        System.out.println(result);
+        //System.out.println(result);
 
         //putting result to JSON Object and parse message body
         JSONObject JSONmessages = new JSONObject(result);
         JSONObject JSONresponse = JSONmessages.getJSONObject("response");
         JSONArray items = JSONresponse.getJSONArray("items");
 
-        File file = new File("/Users/imladyartist/", "VKmessages" + user_id + ".txt");
+        String home = System.getProperty("user.home");
+
+
+       // File file = new File("/Users/imladyartist/", "VKmessages" + user_id + ".txt");
+        File file = new File(home + "/Downloads/" + "VKmessages_" + user_id + ".txt");
         FileWriter writer = new FileWriter(file, false);
 
         //write lines to txt file

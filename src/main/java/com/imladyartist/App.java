@@ -28,6 +28,8 @@ public class App
         System.out.println("Enter access_token from given URL");
         String access_token = reader.readLine();
 
+
+
         new MessagesRecieving().getHistory(user_id, access_token);
         System.out.println(MessagesRecieving.msgCount);
         reader.close();
