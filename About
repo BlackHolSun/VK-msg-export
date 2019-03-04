@@ -1,1 +1,7 @@
 
+This application retrieves message history from a given user from VK.com messanging (similar to Facebook).
+
+Java
+Apache Http Client library
+Maven
+Vk API
